@@ -1,6 +1,5 @@
 "use client";
 
-
 import { Label } from '@/app/components/ui/label';
 import { Card, CardContent } from '@/app/components/ui/card';
 import { useState, useEffect } from 'react';
@@ -11,7 +10,10 @@ import { Button } from '@/app/components/ui/button';
 import toast, { Toaster } from 'react-hot-toast';
 import { motion, AnimatePresence } from 'framer-motion';
 
-interface pageProps {}
+// Rename the interface with a proper name and add properties if needed
+interface PageProps {
+  // You can add props here if needed
+}
 
 // Form data structure
 type FormData = {
@@ -33,7 +35,7 @@ type FormErrors = {
   zip?: string;
 }
 
-const page = ({}: pageProps) => {
+const Page = ({}: PageProps) => {
   // State for current step and form data
   const [step, setStep] = useState<number>(() => {
     // Try to get the step from localStorage
@@ -405,4 +407,4 @@ const page = ({}: pageProps) => {
   );
 };
 
-export default page;
+export default Page;

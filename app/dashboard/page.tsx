@@ -24,7 +24,8 @@ import { Settings, X, Loader2 } from "lucide-react"
 import { getUsersData } from "../api/usersData";
 import { Input } from '@/app/components/ui/input';
 
-interface pageProps {
+interface PageProps {
+  // You can add props here if needed
 }
 
 type User = {
@@ -108,7 +109,7 @@ const columns: ColumnDef<User>[] = [
   }
 ]
 
-const page = ({ }: pageProps) => {
+const Page = ({}: PageProps) => {
   const [allUsers, setAllUsers] = useState<User[]>([]);
   const [filteredUsers, setFilteredUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -269,4 +270,4 @@ const page = ({ }: pageProps) => {
   );
 };
 
-export default page;
+export default Page;
