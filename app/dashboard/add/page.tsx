@@ -10,30 +10,10 @@ import { Button } from '@/app/components/ui/button';
 import toast, { Toaster } from 'react-hot-toast';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// Rename the interface with a proper name and add properties if needed
-interface PageProps {
-  // You can add props here if needed
-}
-
-// Form data structure
-type FormData = {
-  // Basic Info
-  name: string;
-  email: string;
-  // Address
-  street: string;
-  city: string;
-  zip: string;
-}
-
-// Validation errors structure
-type FormErrors = {
-  name?: string;
-  email?: string;
-  street?: string;
-  city?: string;
-  zip?: string;
-}
+// Replace empty interface with proper type
+type PageProps = Record<string, never>;
+// OR simply remove the props parameter:
+// const Page = () => {
 
 const Page = ({}: PageProps) => {
   // State for current step and form data

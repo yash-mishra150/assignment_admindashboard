@@ -24,10 +24,6 @@ import { Settings, X, Loader2 } from "lucide-react"
 import { getUsersData } from "../api/usersData";
 import { Input } from '@/app/components/ui/input';
 
-interface PageProps {
-  // You can add props here if needed
-}
-
 type User = {
   id: string
   name: string
@@ -108,6 +104,8 @@ const columns: ColumnDef<User>[] = [
     }
   }
 ]
+
+type PageProps = Record<string, never>;
 
 const Page = ({}: PageProps) => {
   const [allUsers, setAllUsers] = useState<User[]>([]);
