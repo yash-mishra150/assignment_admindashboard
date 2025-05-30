@@ -12,6 +12,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 // Replace empty interface with proper type
 type PageProps = Record<string, never>;
+
+// Define the types for form data and errors
+type FormData = {
+  name: string;
+  email: string;
+  street: string;
+  city: string;
+  zip: string;
+};
+
+type FormErrors = Partial<Record<keyof FormData, string>>;
+
 // OR simply remove the props parameter:
 // const Page = () => {
 
