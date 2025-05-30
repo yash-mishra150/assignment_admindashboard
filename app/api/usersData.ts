@@ -17,7 +17,7 @@ export const getUsersData = async (): Promise<User[]> => {
     }
     
     // Transform JSONPlaceholder data to match our User type
-    return res.data.map((user: any) => ({
+    return res.data.map((user: JSONPlaceholderUser) => ({
       id: user.id.toString(),
       name: user.name,
       email: user.email,
@@ -28,6 +28,30 @@ export const getUsersData = async (): Promise<User[]> => {
       // Randomly assign status for some users
       status: Math.random() > 0.7 ? "Not Logged In" : undefined
     }));
+}
+
+// Define the shape of the JSONPlaceholder user data
+interface JSONPlaceholderUser {
+  id: number;
+  name: string;
+  email: string;
+  phone: string;
+  address: {
+    street: string;
+    suite: string;
+    city: string;
+    zipcode: string;
+    geo: {
+      lat: string;
+      lng: string;
+    }
+  };
+  website?: string;
+  company?: {
+    name: string;
+    catchPhrase: string;
+    bs: string;
+  };
 }
 
 // Helper function to generate random roles
