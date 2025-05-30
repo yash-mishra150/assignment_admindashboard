@@ -88,7 +88,7 @@ const columns: ColumnDef<User>[] = [
   {
     id: "actions",
     header: "Actions",
-    cell: ({ row }) => {
+    cell: () => {
       return (
         <div className="flex gap-2">
           <Button variant="outline" size="sm" className="rounded-full p-2 h-8 w-8">

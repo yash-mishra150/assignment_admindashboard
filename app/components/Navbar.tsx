@@ -2,10 +2,7 @@ import * as React from 'react';
 import Image from 'next/image';
 import logo from '@/public/logoplace.svg'
 
-interface NavbarProps {
-}
-
-const Navbar = ({ }: NavbarProps) => {
+const Navbar = () => {
     return (
         <div className="flex h-[10vh] justify-between px-[3vw] bg-[#083434] p-4 ">
             <Image src={logo} alt="Logo" className="w-28" />
